@@ -5,7 +5,6 @@
 Phase I is a reproducible academic research prototype that predicts historical medication classes from ICU-derived data and demonstrates how recommendation results can be accompanied by interaction and reference checks.
 
 > **Research prototype only.** This project is not a medical device, diagnostic tool, or prescribing system. Its outputs are historical ATC medication-class rankings, not treatment advice. Do not use it to make decisions about patient care.
-
 ![Top medication-class prevalence in the training data](reports/figures/top_medication_prevalence.png)
 
 ## Results at a glance
