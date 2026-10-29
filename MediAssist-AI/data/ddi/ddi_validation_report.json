@@ -1,0 +1,42 @@
+{
+  "shape": [
+    107,
+    107
+  ],
+  "dtype_after_load": "int64",
+  "values_present": [
+    0,
+    1
+  ],
+  "symmetric": true,
+  "diagonal_sum": 0,
+  "undirected_edges": 1246,
+  "offdiag_density": 0.21971433609592664,
+  "row_labels_equal_med_voc_order": true,
+  "col_labels_equal_med_voc_order": true,
+  "duplicate_labels": 0,
+  "drugs_with_zero_recorded_interactions": [
+    "A12CA",
+    "A11DA",
+    "J01CG",
+    "A11GA",
+    "G01AD",
+    "B02AA",
+    "A11HA"
+  ],
+  "degree_min": 0,
+  "degree_median": 21.0,
+  "degree_max": 63,
+  "ddi_pairs_that_are_also_coprescribed_in_records": 1246,
+  "visits_containing_at_least_one_recorded_ddi_pair": 19123,
+  "mean_per_visit_share_of_pairs_with_recorded_ddi": 0.29206146164349484,
+  "ddi_edges_not_in_ehr_adj": 0,
+  "ddi_semantics": {
+    "meaning_of_1": "an interaction is recorded between the two ATC level-4 classes in the bundle's DDI source",
+    "meaning_of_0": "NOT DETERMINABLE from the bundle: could be 'no interaction recorded', 'not assessed' or 'not in source'. Treated as 'no record'.",
+    "severity_or_mechanism_available": false,
+    "source_database_documented_in_bundle": false,
+    "level_of_assertion": "class (ATC level-4) level; bundle does not document how molecule-level data were aggregated to class level"
+  },
+  "safe_use_rule": "absence of a recorded interaction must never be displayed as 'no interaction' or 'safe'"
+}

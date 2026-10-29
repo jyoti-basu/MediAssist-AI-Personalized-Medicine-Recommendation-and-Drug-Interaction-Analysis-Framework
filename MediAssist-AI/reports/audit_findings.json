@@ -1,0 +1,447 @@
+{
+  "seed": 42,
+  "source_dir": "/home/claude",
+  "files_present": {
+    "README.txt": true,
+    "records_final.csv": true,
+    "voc_final.csv": true,
+    "data_final.csv": true,
+    "SMILES.csv": true,
+    "substructure_smiles.csv": true,
+    "ddi_A_final.csv": true,
+    "ehr_adj_final.csv": true,
+    "ddi_mask_H.csv": true
+  },
+  "pickles_present": {
+    "data_final.pkl": false,
+    "records_final.pkl": false,
+    "voc_final.pkl": false,
+    "ddi_A_final.pkl": false,
+    "ddi_mask_H.pkl": false,
+    "ehr_adj_final.pkl": false,
+    "SMILES.pkl": false,
+    "substructure_smiles.pkl": false
+  },
+  "original_sha256": {
+    "README.txt": "b6e890e77663494580f54aedb0d520e23c05e78c8e00cf33260f2de8470f0395",
+    "records_final.csv": "44f0681a1d6a345b6915a0e290f396cdfcd75946b8002e539a2f938d85df357f",
+    "voc_final.csv": "2cafb509b2b1c0ea040802aa2a2c1efd99fe2c1dacf3cf3c2f87f5361e0fb70f",
+    "data_final.csv": "bdbf5daef4d66c2c1e931d6dc3518026e02878999f0616f0445c77ce3c9c34ed",
+    "SMILES.csv": "7871e77723bbbca2b9dee41b069c7065a36ab3bbb91c03cfc0df9ab61e2ec39a",
+    "substructure_smiles.csv": "dc2800153d73893698f8df435c9aa7d0812c35742b3aee2f4cb66043871f7543",
+    "ddi_A_final.csv": "c165bd253e14e8b374638ff4b7b46e28e927e79899d9c7d8cdac42731c6a1eda",
+    "ehr_adj_final.csv": "0fd0906c0895211aeaa1b146b413ed0d372ea01443b49cfedac6eda5efa00c2d",
+    "ddi_mask_H.csv": "9242fe84cf7f9a071173ea63bb3ec1a263c10c2f031624af75a152275f186772"
+  },
+  "tables": {
+    "records_final.csv": {
+      "rows": 22988,
+      "cols": 6,
+      "dtypes": {
+        "patient_record_index": "int64",
+        "visit_index": "int64",
+        "diagnosis_codes": "str",
+        "procedure_codes": "str",
+        "medication_codes": "str",
+        "additional_field": "int64"
+      },
+      "missing_values": {},
+      "exact_duplicate_rows": 0
+    },
+    "voc_final.csv": {
+      "rows": 4731,
+      "cols": 3,
+      "dtypes": {
+        "vocab": "str",
+        "index": "int64",
+        "code": "str"
+      },
+      "missing_values": {},
+      "exact_duplicate_rows": 0,
+      "vocab_sizes": {
+        "diag_voc": 2572,
+        "pro_voc": 2052,
+        "med_voc": 107
+      },
+      "index_contiguous": {
+        "diag_voc": true,
+        "med_voc": true,
+        "pro_voc": true
+      },
+      "duplicate_codes_within_vocab": 0
+    },
+    "data_final.csv": {
+      "rows": 22988,
+      "cols": 10,
+      "dtypes": {
+        "patienthealthsystemstayid": "int64",
+        "patientunitstayid": "int64",
+        "gender": "str",
+        "age": "str",
+        "hospitaladmitoffset": "int64",
+        "unitvisitnumber": "int64",
+        "DrugBank_Names": "str",
+        "diagnosisstring": "str",
+        "treatmentstring": "str",
+        "text": "str"
+      },
+      "missing_values": {
+        "gender": 2
+      },
+      "exact_duplicate_rows": 0
+    },
+    "SMILES.csv": {
+      "rows": 107,
+      "cols": 3,
+      "dtypes": {
+        "atc_code": "str",
+        "med_index": "int64",
+        "smiles_json": "str"
+      },
+      "missing_values": {},
+      "exact_duplicate_rows": 0
+    },
+    "substructure_smiles.csv": {
+      "rows": 285,
+      "cols": 2,
+      "dtypes": {
+        "index": "int64",
+        "smiles": "str"
+      },
+      "missing_values": {},
+      "exact_duplicate_rows": 0,
+      "alphabetically_sorted": true,
+      "unique_smiles": 285
+    },
+    "ddi_A_final.csv": {
+      "rows": 107,
+      "cols": 108,
+      "dtypes": {
+        "unique_dtypes": [
+          "int64",
+          "str"
+        ]
+      },
+      "missing_values": {},
+      "exact_duplicate_rows": 0
+    },
+    "ehr_adj_final.csv": {
+      "rows": 107,
+      "cols": 108,
+      "dtypes": {
+        "unique_dtypes": [
+          "int64",
+          "str"
+        ]
+      },
+      "missing_values": {},
+      "exact_duplicate_rows": 0
+    },
+    "ddi_mask_H.csv": {
+      "rows": 107,
+      "cols": 286,
+      "dtypes": {
+        "unique_dtypes": [
+          "float64",
+          "str"
+        ]
+      },
+      "missing_values": {},
+      "exact_duplicate_rows": 0
+    }
+  },
+  "records": {
+    "diagnosis_codes": {
+      "vocab_size": 2572,
+      "visits_with_empty_list": 15,
+      "min_idx": 0,
+      "max_idx": 2571,
+      "out_of_range_values": 0,
+      "duplicate_codes_within_a_visit": 0,
+      "mean_list_length": 4.907255959631112,
+      "distinct_codes_used": 2572
+    },
+    "procedure_codes": {
+      "vocab_size": 2052,
+      "visits_with_empty_list": 2646,
+      "min_idx": 0,
+      "max_idx": 2051,
+      "out_of_range_values": 0,
+      "duplicate_codes_within_a_visit": 0,
+      "mean_list_length": 7.224682443013746,
+      "distinct_codes_used": 2052
+    },
+    "medication_codes": {
+      "vocab_size": 107,
+      "visits_with_empty_list": 0,
+      "min_idx": 0,
+      "max_idx": 106,
+      "out_of_range_values": 0,
+      "duplicate_codes_within_a_visit": 0,
+      "mean_list_length": 9.538454846006612,
+      "distinct_codes_used": 107
+    }
+  },
+  "patients": 10526,
+  "visits_per_patient": {
+    "2": 9011,
+    "3": 1209,
+    "4": 235,
+    "5": 41,
+    "6": 20,
+    "7": 8,
+    "9": 2
+  },
+  "additional_field_values": {
+    "0": 10526,
+    "1": 8681,
+    "2": 2661,
+    "3": 624,
+    "4": 292,
+    "5": 102,
+    "6": 54,
+    "7": 18,
+    "8": 13,
+    "9": 10,
+    "10": 3,
+    "11": 2,
+    "13": 1,
+    "16": 1
+  },
+  "alignment": {
+    "records_rows_equal_data_rows": true,
+    "medication_idx_matches_data_final_ATC_list_rowwise": true,
+    "diagnosis_idx_matches_data_final_diagnosis_strings_rowwise": true,
+    "ddi_A_row_labels_equal_med_voc_order": true,
+    "ddi_A_col_labels_equal_med_voc_order": true,
+    "ehr_adj_labels_equal_med_voc_order": true,
+    "ddi_mask_H_row_labels_equal_med_voc_order": true,
+    "SMILES_med_index_to_atc_matches_med_voc": true,
+    "substructure_count_equals_H_columns": true,
+    "all_med_codes_are_ATC_level4_format": true,
+    "distinct_ATC_level3_groups": 75,
+    "patients_contiguous_and_non_decreasing_in_file": true,
+    "visit_index_is_0_1_2_.._within_each_patient_in_file_order": true,
+    "share_patients_hospitaladmitoffset_non_increasing_in_file_order": 1.0,
+    "share_patients_unitvisitnumber_strictly_increasing_in_file_order": 1.0,
+    "additional_field_equals_unitvisitnumber_minus_1_share": 0.9244388376544284,
+    "additional_field_equals_visit_index_share": 0.88737602227249
+  },
+  "demographics": {
+    "gender_counts": {
+      "Male": 13045,
+      "Female": 9941,
+      "nan": 2
+    },
+    "gender_missing_rows": 2,
+    "age_top_coded_'> 89'_rows": 544,
+    "age_unparseable_rows_excluding_top_coded": 0,
+    "age_min": 14.0,
+    "age_max_numeric": 89.0,
+    "age_median_numeric": 66.0,
+    "rows_age_under_18": 10,
+    "rows_age_under_15": 2,
+    "rows_age_18_to_64": 10547,
+    "rows_age_65_plus_incl_top_coded": 12431,
+    "age_constant_within_patient": true,
+    "text_column_distinct_values": 1,
+    "text_column_value": "Clinical notes placeholder for eICU.",
+    "treatmentstring_nonempty_rows": 20342,
+    "hospitaladmitoffset_min": -243160,
+    "hospitaladmitoffset_max": 35924
+  },
+  "duplicates": {
+    "visits_sharing_identical_diag_proc_med_content": 37,
+    "extra_copies": 19,
+    "identical_medication_sets_extra_copies": 3241,
+    "duplicate_patientunitstayid": 0
+  },
+  "leakage": {
+    "procedure_vocab_entries_total": 2052,
+    "procedure_vocab_entries_with_medications_segment": 374,
+    "procedure_vocab_entries_with_drug_class_keyword": 730,
+    "procedure_vocab_entries_any_medication_like": 839,
+    "visits_with_nonempty_procedures": 20342,
+    "visits_with_>=1_medications_segment_procedure": 8781,
+    "visits_with_>=1_any_medication_like_procedure": 14528,
+    "ehr_adj_equals_cooccurrence_recomputed_from_ALL_visits": true,
+    "ehr_adj_offdiag_density": 0.873743607829307,
+    "same_patient_has_multiple_visits_share": 1.0,
+    "data_final_column_named_DrugBank_Names_actually_holds": "ATC level-4 code strings (identical to med_voc codes)",
+    "pairs_cooccurring_in_full_data_but_not_in_train_split(offdiag cells)": 40
+  },
+  "splits": {
+    "patients": {
+      "train": 7368,
+      "test": 1580,
+      "val": 1578
+    },
+    "visits": {
+      "train": 16110,
+      "test": 3447,
+      "val": 3431
+    },
+    "seed": 42,
+    "ratio": "70/15/15 by patient"
+  },
+  "targets": {
+    "multihot_shape": [
+      22988,
+      107
+    ],
+    "nnz": 219270,
+    "mean_meds_per_visit": 9.538454846006612
+  },
+  "label_frequency": {
+    "min_visits_per_drug": 15,
+    "max_visits_per_drug": 14168,
+    "median": 948.0,
+    "drugs_in_<100_visits": 8,
+    "top5": [
+      [
+        "A12CA",
+        14168
+      ],
+      [
+        "N02AJ",
+        11815
+      ],
+      [
+        "A12BA",
+        11652
+      ],
+      [
+        "C03CA",
+        9431
+      ],
+      [
+        "N01AH",
+        7995
+      ]
+    ]
+  },
+  "ddi": {
+    "shape": [
+      107,
+      107
+    ],
+    "dtype_after_load": "int64",
+    "values_present": [
+      0,
+      1
+    ],
+    "symmetric": true,
+    "diagonal_sum": 0,
+    "undirected_edges": 1246,
+    "offdiag_density": 0.21971433609592664,
+    "row_labels_equal_med_voc_order": true,
+    "col_labels_equal_med_voc_order": true,
+    "duplicate_labels": 0,
+    "drugs_with_zero_recorded_interactions": [
+      "A12CA",
+      "A11DA",
+      "J01CG",
+      "A11GA",
+      "G01AD",
+      "B02AA",
+      "A11HA"
+    ],
+    "degree_min": 0,
+    "degree_median": 21.0,
+    "degree_max": 63,
+    "ddi_pairs_that_are_also_coprescribed_in_records": 1246,
+    "visits_containing_at_least_one_recorded_ddi_pair": 19123,
+    "mean_per_visit_share_of_pairs_with_recorded_ddi": 0.29206146164349484,
+    "ddi_edges_not_in_ehr_adj": 0,
+    "ddi_semantics": {
+      "meaning_of_1": "an interaction is recorded between the two ATC level-4 classes in the bundle's DDI source",
+      "meaning_of_0": "NOT DETERMINABLE from the bundle: could be 'no interaction recorded', 'not assessed' or 'not in source'. Treated as 'no record'.",
+      "severity_or_mechanism_available": false,
+      "source_database_documented_in_bundle": false,
+      "level_of_assertion": "class (ATC level-4) level; bundle does not document how molecule-level data were aggregated to class level"
+    },
+    "safe_use_rule": "absence of a recorded interaction must never be displayed as 'no interaction' or 'safe'",
+    "ehr_adj": {
+      "symmetric": true,
+      "diagonal_sum": 0,
+      "equals_cooccurrence_recomputed_from_all_visits": true
+    }
+  },
+  "h_alignment": {
+    "rdkit_version": "2026.09.1",
+    "method": "BRICS decomposition of SMILES.csv structures compared with ddi_mask_H columns by drug-set signature",
+    "recomputed_per_drug_fragment_counts_equal_H_row_sums": true,
+    "all_recomputed_fragments_found_in_substructure_smiles": true,
+    "recomputed_column_sums_multiset_equals_H": true,
+    "columns_uniquely_matched": 91,
+    "columns_ambiguous": 194,
+    "columns_where_identity_mapping_holds_among_uniquely_matched": 1,
+    "identity_mapping_share_of_H_positive_cells_confirmed": 0.026156941649899398,
+    "conclusion": "H column order is NOT the row order of substructure_smiles.csv; index-based join is unsafe"
+  },
+  "mapping": {
+    "rows": 107,
+    "atc_level4_format_valid": 107,
+    "generic_names_verified": 0,
+    "brand_names_verified": 0,
+    "class_names_verified": 0,
+    "all_rows_require_review": true,
+    "structures_per_code_distribution": {
+      "1": 78,
+      "2": 24,
+      "3": 4,
+      "4": 1
+    }
+  },
+  "synthetic_age": {
+    "rows": 370,
+    "by_category": {
+      "synthetic_reference_age_window_and_dose_availability": 150,
+      "age_group_boundaries_real_medication_no_reference": 125,
+      "invalid_or_missing_age": 24,
+      "unknown_identifier": 18,
+      "invalid_age_takes_precedence": 12,
+      "atc_level_mismatch": 12,
+      "identifier_normalisation": 6,
+      "identifier_conflict": 6,
+      "missing_identifier": 3,
+      "unmapped_identifier": 3,
+      "consistent_identifier_pair": 3,
+      "id_is_vocabulary_index_not_atc": 3,
+      "synthetic_identifier": 3,
+      "dose_reference_unavailable_real_medication": 1,
+      "minor_with_real_medication_requires_review": 1
+    },
+    "by_status": {
+      "requires_clinician_review": 95,
+      "reference_unavailable": 69,
+      "age_check_passed_synthetic_rule": 54,
+      "age_outside_reference_range": 49,
+      "invalid_age_input": 36,
+      "dose_reference_unavailable": 25,
+      "unknown_medication_identifier": 18,
+      "unmapped_atc_level_mismatch": 12,
+      "identifier_conflict": 6,
+      "missing_medication_identifier": 3,
+      "unmapped_medication_identifier": 3
+    },
+    "by_age_group": {
+      "child": 107,
+      "older_adult": 96,
+      "adult": 75,
+      "adolescent": 56,
+      "unclassified": 36
+    }
+  },
+  "synthetic_ddi": {
+    "rows": 61,
+    "by_status": {
+      "interaction_recorded": 25,
+      "no_interaction_record_not_proof_of_safety": 20,
+      "no_interaction_record_coverage_unverified": 8,
+      "unknown_medication_identifier": 5,
+      "duplicate_medication_identifier": 3
+    }
+  },
+  "originals_unchanged": true
+}

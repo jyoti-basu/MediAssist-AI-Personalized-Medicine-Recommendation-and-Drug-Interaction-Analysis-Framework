@@ -1,0 +1,8 @@
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.4
+matplotlib>=3.8
+joblib>=1.3
+jupyter>=1.0
+rdkit>=2023.9   # optional: only for the ddi_mask_H alignment diagnostic

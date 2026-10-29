@@ -1,0 +1,89 @@
+{
+  "seed": 42,
+  "target": "multi-label historical ATC level-4 medication class prediction",
+  "feature_metadata": {
+    "diagnosis_features": 2572,
+    "procedure_features_before_conservative_filter": 2052,
+    "procedure_codes_removed_as_medication_like": 839,
+    "demographic_features": 11,
+    "total_features": 4635,
+    "procedure_visits_with_any_medication_like_flag": 14528,
+    "feature_policy": "diagnosis + conservatively filtered procedures + age bands + gender/missing flags; excludes identifiers, offsets, undocumented field, targets and all medication-like procedure codes"
+  },
+  "split_counts": {
+    "train": 16110,
+    "val": 3431,
+    "test": 3447
+  },
+  "patient_counts": {
+    "train": 7368,
+    "val": 1578,
+    "test": 1580
+  },
+  "alphas_considered": [
+    1e-05,
+    0.0001
+  ],
+  "selected_alpha": 0.0001,
+  "top_k": 15,
+  "validation_model_selection": {
+    "1e-05": {
+      "top_k": 15,
+      "selected_validation_metrics": {
+        "micro_precision": 0.3313708345477509,
+        "micro_recall": 0.5113949862060694,
+        "micro_f1": 0.4021553299612088,
+        "samples_jaccard": 0.24228045903388346,
+        "predicted_set_size": 15,
+        "recorded_ddi_pair_rate": 0.3294166631969022,
+        "recorded_ddi_pairs": 118674,
+        "all_predicted_pairs": 360255,
+        "ddi_interpretation": "recorded source interactions only; a non-recorded pair is not proof of safety"
+      }
+    },
+    "0.0001": {
+      "top_k": 15,
+      "selected_validation_metrics": {
+        "micro_precision": 0.36224618672884484,
+        "micro_recall": 0.5590440206309224,
+        "micro_f1": 0.43962600073102,
+        "samples_jaccard": 0.2713602689889941,
+        "predicted_set_size": 15,
+        "recorded_ddi_pair_rate": 0.34687929383353455,
+        "recorded_ddi_pairs": 124965,
+        "all_predicted_pairs": 360255,
+        "ddi_interpretation": "recorded source interactions only; a non-recorded pair is not proof of safety"
+      }
+    }
+  },
+  "baseline_test_metrics": {
+    "micro_precision": 0.33035489797891887,
+    "micro_recall": 0.5349514563106796,
+    "micro_f1": 0.40846535541340345,
+    "samples_jaccard": 0.24636904229838522,
+    "predicted_set_size": 15,
+    "recorded_ddi_pair_rate": 0.42857142857142855,
+    "recorded_ddi_pairs": 155115,
+    "all_predicted_pairs": 361935,
+    "ddi_interpretation": "recorded source interactions only; a non-recorded pair is not proof of safety"
+  },
+  "test_metrics": {
+    "micro_precision": 0.35354414466686007,
+    "micro_recall": 0.572502348888193,
+    "micro_f1": 0.43713756202546783,
+    "samples_jaccard": 0.2694383918750003,
+    "predicted_set_size": 15,
+    "recorded_ddi_pair_rate": 0.3457333499108956,
+    "recorded_ddi_pairs": 125133,
+    "all_predicted_pairs": 361935,
+    "ddi_interpretation": "recorded source interactions only; a non-recorded pair is not proof of safety"
+  },
+  "ddi_alignment": {
+    "shape": [
+      107,
+      107
+    ],
+    "mapping_indices_match": true
+  },
+  "synthetic_data_excluded_from_training_and_evaluation": true
+}

@@ -1,0 +1,45 @@
+artifact_path,location,format,rows,cols,bytes,sha256,status,intended_use,derived_from,notes
+/home/claude/README.txt,outside_package,txt,,,933,b6e890e77663494580f54aedb0d520e23c05e78c8e00cf33260f2de8470f0395,original_referenced_not_copied,source_of_truth,,unchanged; hash verified before and after run
+/home/claude/records_final.csv,outside_package,csv,22988,6,2540360,44f0681a1d6a345b6915a0e290f396cdfcd75946b8002e539a2f938d85df357f,original_referenced_not_copied,source_of_truth,,unchanged; hash verified before and after run
+/home/claude/voc_final.csv,outside_package,csv,4731,3,374320,2cafb509b2b1c0ea040802aa2a2c1efd99fe2c1dacf3cf3c2f87f5361e0fb70f,original_referenced_not_copied,source_of_truth,,unchanged; hash verified before and after run
+/home/claude/data_final.csv,outside_package,csv,22988,10,22872905,bdbf5daef4d66c2c1e931d6dc3518026e02878999f0616f0445c77ce3c9c34ed,original_referenced_not_copied,source_of_truth,,unchanged; hash verified before and after run
+/home/claude/SMILES.csv,outside_package,csv,107,3,10200,7871e77723bbbca2b9dee41b069c7065a36ab3bbb91c03cfc0df9ab61e2ec39a,original_referenced_not_copied,source_of_truth,,unchanged; hash verified before and after run
+/home/claude/substructure_smiles.csv,outside_package,csv,285,2,9046,dc2800153d73893698f8df435c9aa7d0812c35742b3aee2f4cb66043871f7543,original_referenced_not_copied,source_of_truth,,unchanged; hash verified before and after run
+/home/claude/ddi_A_final.csv,outside_package,csv,107,108,24191,c165bd253e14e8b374638ff4b7b46e28e927e79899d9c7d8cdac42731c6a1eda,original_referenced_not_copied,source_of_truth,,unchanged; hash verified before and after run
+/home/claude/ehr_adj_final.csv,outside_package,csv,107,108,24191,0fd0906c0895211aeaa1b146b413ed0d372ea01443b49cfedac6eda5efa00c2d,original_referenced_not_copied,source_of_truth,,unchanged; hash verified before and after run
+/home/claude/ddi_mask_H.csv,outside_package,csv,107,286,124801,9242fe84cf7f9a071173ea63bb3ec1a263c10c2f031624af75a152275f186772,original_referenced_not_copied,source_of_truth,,unchanged; hash verified before and after run
+data/model_data/model_inputs.csv,in_package,csv,22988,20,3625235,fccc3bb4e404160cc2d99e316dad474c10afdd5351aca3b600efc993c985cda6,transformed,main_model_training;model_evaluation,"records_final.csv, data_final.csv, voc_final.csv",inputs only; leakage-flagged
+data/model_data/model_targets.csv,in_package,csv,22988,5,1237238,9893da7551d7548c5dea0fdaae5a77da653bb6ddcab723c747fffaf55590b7ae,transformed,main_model_training;model_evaluation,records_final.csv,targets (medication indices)
+data/model_data/model_targets_multihot.npz,in_package,npz,22988,107,210122,02917ab7c876220bd0f28c9ff9ec48e1508ad178fd1991c1367f84811be86751,transformed,main_model_training;model_evaluation,records_final.csv,sparse CSR multi-hot targets
+data/model_data/splits_patient_level.csv,in_package,csv,10526,3,142082,893c2ba14edc5eec61f35bedd06ccbc186839c3b0a365c7a36a0ffb15a580b0e,derived,main_model_training;model_evaluation,records_final.csv,seeded patient-level 70/15/15
+data/model_data/procedure_vocab_leakage_flags.csv,in_package,csv,2052,6,244235,9100dbf5a59df53ba962c9b875af98944f3338434b1e11f78cf601dd7f53067d,derived,main_model_training,voc_final.csv (pro_voc),leakage flags; keyword rule is heuristic
+data/vocabulary_and_mapping/medication_vocab_mapping.csv,in_package,csv,107,21,54247,3f0ab0fb22a9de7ec50776d998f7321d40df5d9d53b76834e9d6dc4c122a7187,transformed,ddi_checking;medication_mapping,"voc_final.csv, SMILES.csv, ddi_A_final.csv",class-level only; names blank
+data/vocabulary_and_mapping/safety_status_codes.json,in_package,json,,,1653,d4f10d640131f3d3243ed56dad3064dc2a461cfb3f49964a09bddca44547f571,derived,synthetic_software_testing;integration,code/build_package.py,status/action vocabulary
+data/ddi/ddi_matrix.npy,in_package,npy,107,107,11577,df6d8d714af2296da6277f7dfe6cf4d180f4995d5c44018958dfee0658903703,transformed,ddi_checking,ddi_A_final.csv,values identical to original
+data/ddi/ddi_index_map.csv,in_package,csv,107,6,3192,b23547c815648e8d7b4fa30a33081c1f2d3da215ec64e2a7f817a39e5f847349,derived,ddi_checking,"ddi_A_final.csv, voc_final.csv",
+data/ddi/ddi_edge_list.csv,in_package,csv,1246,8,130774,660e06b7865ae1f301ff7addde2419a31e02e216b8383f9516d87ab46087e6b1,derived,ddi_checking,ddi_A_final.csv,no severity available
+data/ddi/ddi_coverage_per_drug.csv,in_package,csv,107,4,4276,01c0c2f5ae78e456313434b2f5c42066b84ad5522db04efb5823a33beb467b29,derived,ddi_checking,ddi_A_final.csv,
+data/ddi/ddi_validation_report.json,in_package,json,,,1393,9f46ae2f185394384ce34fa817c2bfcee3eb734c126c98ee75c390550d3b128e,derived,ddi_checking,ddi_A_final.csv,machine-readable validation
+data/ddi/ehr_cooccurrence_train_only.npy,in_package,npy,107,107,11577,5019cee9a5662abd340f7cf88a2739cb3ebbd7cf39d44af9f4baab9cf90fc639,derived,main_model_training,records_final.csv + splits,safe co-occurrence graph
+data/ddi/ehr_cooccurrence_full_data_LEAKS_TEST.npy,in_package,npy,107,107,11577,2703a4a343ac11b613d31492069c789aad5c481742dc40c937412f9d9fa2d96b,transformed,reference_only_do_not_train_with,ehr_adj_final.csv,built from all visits
+data/ddi/ddi_mask_H.npy,in_package,npy,107,285,30623,0bf7a3d0168089d81f8c2df0b699397c5eecc028eda3246e585b5aedb4555c67,transformed,reference_only,ddi_mask_H.csv,column order unverified
+data/ddi/h_column_alignment_diagnostic.csv,in_package,csv,285,6,14847,c44475da0fd83689d862d74eabc9650e6bf3b2852d15c6dfee11b452e596f322,derived,diagnostic_only,"SMILES.csv, ddi_mask_H.csv, substructure_smiles.csv","inferred, unverified"
+data/synthetic_testing/synthetic_age_validation.csv,in_package,csv,370,13,96720,16b02971f27d7606b4812b1e04e8ec921c0e5a9d65ad519930da16248147a068,synthetic,synthetic_software_testing,code/build_package.py (seeded),NOT for training/evaluation
+data/synthetic_testing/synthetic_reference_rules.csv,in_package,csv,6,8,756,c74afacac40ab5f8e41980fe987ebe1236ada94831209d0c30fa4c21e5f61c0e,synthetic,synthetic_software_testing,code/build_package.py,"fake medicines, fake windows"
+data/synthetic_testing/synthetic_ddi_check_cases.csv,in_package,csv,61,11,14187,3121236099f3b133db9f01164bfd59b1a6b831ba4eb60a4b8358310636dffd3c,synthetic,synthetic_software_testing,ddi_A_final.csv (expected values),NOT for training/evaluation
+data/synthetic_testing/synthetic_case_catalogue.md,in_package,md,,,6628,8e2296695e149ca9ab8eebd2d7baeb2d8d9efcb6bc124436a285aa17c6ab1981,documentation,documentation,,
+data/clinical_reference/medication_safety_reference_template.csv,in_package,csv,107,18,17070,106a6ba29e9ab21208273ddabb30ddf6ee1d9d32797c8d405999ad2e27418a1d,template,verified_clinical_reference (empty),voc_final.csv (identifiers only),no medical content
+data/clinical_reference/reference_sources_needed.md,in_package,md,,,2922,bbabaa78260f3a7638ac92f50e5ceac8c0bad746d6e0bc5a364e2b0b0f4f63fd,documentation,documentation,,"candidate sources, unverified"
+integration/mediassist_safety.py,in_package,py,,,14733,88d3684dfac6403a3d52ac74bc1f3a5be14482ec4133489a4c23aa68b975a526,code,integration,,identifier/age/DDI safety module
+integration/age_group_config.json,in_package,json,,,810,84dc576b8b494471b834de73fa8c438558db48fd34a824a074639e677eb451f1,synthetic,synthetic_software_testing,,"synthetic test parameters, not clinical"
+integration/run_synthetic_tests.py,in_package,py,,,3709,76fd5e91efba0062a06430040ec9ebe8ce2afbd620fe31970a825a9454661f44,code,synthetic_software_testing,,
+code/build_package.py,in_package,py,,,44260,d9776538db65ad3b526fd89d9a700ed646113a3566943d853dd6d35c1d3e10a4,code,reproducibility,,
+code/write_reports.py,in_package,py,,,51290,213a7ce5e324519ee5555fdc75e024377940e3761d6898c26002f236a65b72b2,code,reproducibility,,
+reports/audit_findings.json,in_package,json,,,13026,90aa5aeccfad56bb332f44c581b781d73de4c1d8f65869c173b72c54bbeea2fc,derived,documentation,all originals,source of every reported number
+reports/dataset_audit_report.md,in_package,md,,,10886,ef34d78ce97e2381d52c9b401613f71a999576b0cb2a2cbfb67aa5b03f6152d4,documentation,documentation,,
+reports/data_quality_report.md,in_package,md,,,2790,02d46b33bbd03e61b0ac535243c4afb08df63f25fdbdd058bc4fe339909a8383,documentation,documentation,,
+reports/data_dictionary.md,in_package,md,,,6490,bc82988254e29803900da94cc5a444987b708dcabf3d8b0bf96df6209a8ddd65,documentation,documentation,,
+reports/final_report.md,in_package,md,,,6697,3cc85ef8854285bbbe2f446892f4dd3208e703c001dec6d8c664acc516674fcd,documentation,documentation,,
+README.md,in_package,md,,,3657,64a0a97023aafa205e66a0c65bc71ad7a01b52c7d8ad136886f9c2145814902f,documentation,documentation,,
+requirements.txt,in_package,txt,,,109,e722ec5bff700fb11d4cb9360893b05697df628c6294ef653c2a0ea42d81dfbb,code,reproducibility,,
+reproduce.sh,in_package,sh,,,328,5bc20d16e127df970fb124e613ec9da947b7bec56eaade91d6f9929847eb2e2b,code,reproducibility,,

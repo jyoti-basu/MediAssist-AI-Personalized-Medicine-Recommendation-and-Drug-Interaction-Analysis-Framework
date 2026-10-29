@@ -1,0 +1,15 @@
+{
+  "_label": "SYNTHETIC SOFTWARE-TEST PARAMETERS - NOT CLINICAL GUIDANCE. Thresholds exist only so the age-validation module can be exercised; they are configurable and carry no medical meaning.",
+  "rule_source_status": "synthetic_test_rule_not_clinical",
+  "min_valid_age_years": 0,
+  "max_valid_age_years": 120,
+  "adult_age_years": 18,
+  "policy_minors_require_review": true,
+  "age_bound_convention": "lower bound inclusive, upper bound exclusive (the final group also accepts the maximum valid age)",
+  "age_groups": [
+    {"name": "child", "min_inclusive": 0, "max_exclusive": 12},
+    {"name": "adolescent", "min_inclusive": 12, "max_exclusive": 18},
+    {"name": "adult", "min_inclusive": 18, "max_exclusive": 65},
+    {"name": "older_adult", "min_inclusive": 65, "max_exclusive": 120.0000001}
+  ]
+}

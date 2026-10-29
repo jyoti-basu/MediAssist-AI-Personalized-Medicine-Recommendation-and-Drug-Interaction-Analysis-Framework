@@ -1,0 +1,13 @@
+{
+  "diagnosis_features": 2572,
+  "procedure_features_before_conservative_filter": 2052,
+  "procedure_codes_removed_as_medication_like": 839,
+  "demographic_features": 11,
+  "total_features": 4635,
+  "procedure_visits_with_any_medication_like_flag": 14528,
+  "feature_policy": "diagnosis + conservatively filtered procedures + age bands + gender/missing flags; excludes identifiers, offsets, undocumented field, targets and all medication-like procedure codes",
+  "top_k": 15,
+  "selected_alpha": 0.0001,
+  "selection_split": "validation",
+  "training_after_selection": "train+validation"
+}

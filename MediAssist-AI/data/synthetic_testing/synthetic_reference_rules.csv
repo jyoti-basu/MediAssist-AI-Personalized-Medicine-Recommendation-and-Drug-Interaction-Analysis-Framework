@@ -1,0 +1,7 @@
+medication_identifier,patient_age_min,patient_age_max_exclusive,dose_reference_available,always_require_review,synthetic_rule_description,rule_source_status,is_real_medication
+SYN-REF-A,0,120.0000001,Y,N,"all valid ages allowed, dose reference present",synthetic_test_rule_not_clinical,N
+SYN-REF-B,18,120.0000001,Y,N,adults only (synthetic),synthetic_test_rule_not_clinical,N
+SYN-REF-C,12,65.0,Y,N,12 <= age < 65 (synthetic),synthetic_test_rule_not_clinical,N
+SYN-REF-D,0,120.0000001,N,N,age allowed but dose reference missing,synthetic_test_rule_not_clinical,N
+SYN-REF-E,0,120.0000001,Y,Y,always routed to clinician review,synthetic_test_rule_not_clinical,N
+SYN-REF-F,0,2.0,Y,N,0 <= age < 2 (synthetic small-age window),synthetic_test_rule_not_clinical,N

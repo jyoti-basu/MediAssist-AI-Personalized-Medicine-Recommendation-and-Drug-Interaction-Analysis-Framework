@@ -1,0 +1,28 @@
+{
+  "_label": "Status vocabulary used by integration/mediassist_safety.py. Software behaviour only; not clinical content.",
+  "age_validation": {
+    "invalid_age_input": "request_valid_age",
+    "missing_medication_identifier": "withhold_medication_output_and_flag_for_review",
+    "unknown_medication_identifier": "withhold_medication_output_and_flag_for_review",
+    "unmapped_medication_identifier": "withhold_medication_output_and_flag_for_review",
+    "unmapped_atc_level_mismatch": "withhold_medication_output_and_flag_for_review",
+    "identifier_conflict": "withhold_medication_output_and_flag_for_review",
+    "requires_clinician_review": "show_with_mandatory_clinician_review_notice",
+    "reference_unavailable": "show_with_warning_age_suitability_not_assessed",
+    "age_outside_reference_range": "flag_age_unsuitable_per_reference_and_require_review",
+    "dose_reference_unavailable": "show_without_dose_information_and_warn",
+    "age_check_passed_synthetic_rule": "proceed_with_standard_decision_support_disclaimer"
+  },
+  "priority_order": [
+    "invalid_age_input",
+    "medication identifier failures",
+    "reference-based outcomes"
+  ],
+  "ddi": {
+    "interaction_recorded": "show_interaction_warning_severity_not_available",
+    "no_interaction_record_not_proof_of_safety": "show_notice_no_record_is_not_evidence_of_safety",
+    "no_interaction_record_coverage_unverified": "show_notice_no_record_is_not_evidence_of_safety_and_drug_has_no_recorded_interactions_in_source",
+    "unknown_medication_identifier": "withhold_and_flag_for_review",
+    "duplicate_medication_identifier": "show_notice_duplicate_class_not_assessed"
+  }
+}

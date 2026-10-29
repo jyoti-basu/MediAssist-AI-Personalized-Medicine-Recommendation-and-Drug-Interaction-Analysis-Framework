@@ -1,0 +1,420 @@
+{
+  "prototype_notice": "Fictional research demonstration only; not diagnosis, prescribing, or clinical validation.",
+  "original_fictional_input": "Fictional research case: 61 years old. Symptoms: cough for 3 days. Current medications: R05CA. Allergies: none. Conditions: none. Research diagnosis indices: 0, 1, 2.",
+  "nlp_extraction": {
+    "source_text": "Fictional research case: 61 years old. Symptoms: cough for 3 days. Current medications: R05CA. Allergies: none. Conditions: none. Research diagnosis indices: 0, 1, 2.",
+    "age": 61,
+    "symptoms": [
+      "cough for 3 days"
+    ],
+    "symptom_duration": "3 days",
+    "current_medications_raw": [
+      "R05CA"
+    ],
+    "allergies": [],
+    "conditions": [],
+    "research_diagnosis_indices": [
+      0,
+      1,
+      2
+    ],
+    "uncertain_extractions": [],
+    "extraction_method": "transparent_rule_based_prototype_not_trained_on_clinical_dataset"
+  },
+  "patient_information_validation": {
+    "is_complete_for_demo": true,
+    "missing_fields": [],
+    "unmapped_medications": [],
+    "follow_up_questions": []
+  },
+  "current_medication_mapping": {
+    "status": "ok",
+    "class_id": 0,
+    "atc": "R05CA",
+    "synthetic": false
+  },
+  "candidate_class_count": 15,
+  "candidate_medication_classes": [
+    {
+      "class_id": 32,
+      "atc_code": "C03CA",
+      "model_score": 0.78198633868813,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 32,
+          "atc": "C03CA",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 6,
+      "atc_code": "A12BA",
+      "model_score": 0.7121884711103079,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 6,
+          "atc": "A12BA",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 15,
+      "atc_code": "C07AB",
+      "model_score": 0.6403353816662161,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 15,
+          "atc": "C07AB",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 14,
+      "atc_code": "D04AA",
+      "model_score": 0.5976246558198092,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 14,
+          "atc": "D04AA",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 23,
+      "atc_code": "N05CF",
+      "model_score": 0.5965756375658472,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 23,
+          "atc": "N05CF",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 9,
+      "atc_code": "A12CA",
+      "model_score": 0.581430415733164,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_coverage_unverified",
+        "action": "show_notice_no_record_is_not_evidence_of_safety_and_drug_has_no_recorded_interactions_in_source"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 9,
+          "atc": "A12CA",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 17,
+      "atc_code": "A02BC",
+      "model_score": 0.571504142875961,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 17,
+          "atc": "A02BC",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 13,
+      "atc_code": "N01AH",
+      "model_score": 0.4945449906975387,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 13,
+          "atc": "N01AH",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 36,
+      "atc_code": "A02BD",
+      "model_score": 0.4485063137377206,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 36,
+          "atc": "A02BD",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 47,
+      "atc_code": "N05CD",
+      "model_score": 0.4391985926795566,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 47,
+          "atc": "N05CD",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 38,
+      "atc_code": "A01AD",
+      "model_score": 0.4050829018439077,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 38,
+          "atc": "A01AD",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 63,
+      "atc_code": "N02BF",
+      "model_score": 0.3564174483973545,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 63,
+          "atc": "N02BF",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 20,
+      "atc_code": "N02AJ",
+      "model_score": 0.35166523344731904,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 20,
+          "atc": "N02AJ",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 5,
+      "atc_code": "N06AB",
+      "model_score": 0.35097772011386813,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "no_interaction_record_not_proof_of_safety",
+        "action": "show_notice_no_record_is_not_evidence_of_safety"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 5,
+          "atc": "N06AB",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    },
+    {
+      "class_id": 0,
+      "atc_code": "R05CA",
+      "model_score": 0.34662593212581566,
+      "mapping_status": "class_level_atc_code_only",
+      "requires_review": true,
+      "ddi_against_current_class": {
+        "status": "duplicate_medication_identifier",
+        "action": "show_notice_duplicate_class_not_assessed"
+      },
+      "age_and_reference_status": {
+        "age_years": 61.0,
+        "age_group": "adult",
+        "age_issue": null,
+        "medication": {
+          "status": "ok",
+          "class_id": 0,
+          "atc": "R05CA",
+          "synthetic": false
+        },
+        "status": "reference_unavailable",
+        "action": "show_with_warning_age_suitability_not_assessed"
+      },
+      "dosage_reference": "unavailable: the supplied clinical-reference template contains no verified dosage facts"
+    }
+  ],
+  "limitations": [
+    "Candidate scores are model rankings, not calibrated clinical probabilities.",
+    "ATC classes are not individual drugs; generic and brand mappings are unverified.",
+    "DDI source only reports recorded class-level pairs; no record is not proof of safety.",
+    "Age and dosage references are unavailable for real classes in this package."
+  ]
+}
